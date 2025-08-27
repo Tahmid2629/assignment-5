@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Service Directory</title>
+    <!--       Fonts      --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--       Daisy UI CDN      --> 
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!--       Tailwind CDN      --> 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="max-w-[1920px] mx-auto">
+    <!-- Navbar -->
+    <div class="navbar justify-between my-6 max-w-[1800px] mx-auto">
+        <div class="flex gap-3 justify-center items-center">
+            <img src="./assets/logo.png" alt="logo" class="size-[55px]">
+            <p class="font-black text-xl text-[#006747] max-w-[136px] inter">Emergency Service</p>
+        </div>
+        <div class="flex gap-5">
+           <div class="flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-b from-green-100 to-green-50 "> <span class="inter font-black text-base">0</span> <img src="./assets/heart.png" alt="" class="size-[22px]"> </div>
+           <div class="flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-b from-green-100 to-green-50 "> <span class="inter font-black text-base">100</span> <img src="./assets/coin.png" alt="" class="size-[22px]"> </div>
+           <div class="flex items-center gap-2 px-6 py-2 rounded-full bg-[#00A63E] inter font-semibold text-base text-white"> <span>0</span> Copy</div> 
+        </div>
+    </div>
+    <!-- Hero Section -->
+    <div class="hero min-h-[200px] bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-white flex flex-col justify-center items-center py-5">
+        <img src="./assets/logo-dark.png" alt="gov-logo" class="size-[92px]">
+        <h1 class="hind-madurai text-[40px] font-bold">Emergency Service Directory</h1>
+        <p class="hind-madurai font-semibold text-xl mt-2">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+    </div>
+    <!-- Main Section -->
+    <div class="p-6 flex flex-col lg:flex-row gap-6 bg-gradient-to-b from-green-100 to-green-50 ">
+
+    <!-- Cards Section -->
+    
+        <div class="card bg-white shadow-md p-4 relative">
+        <button class="absolute top-2 right-2 heart text-xl">🤍</button>
+        <div class="card-body items-center text-center">
+          <h2 class="card-title">National Emergency Number</h2>
+          <p class="text-lg font-bold hotline">999</p>
+          <div class="badge badge-neutral">All</div>
+          <div class="card-actions mt-3">
+            <button class="btn btn-info copy-btn">📋 Copy</button>
+            <button class="btn btn-success call-btn">📞 Call</button>
+          </div>
+        </div>
+      </div>
+
+    
+</body>
+</html>
