@@ -51,7 +51,7 @@ document.querySelectorAll(".card").forEach((card) => {
       coinCounter.textContent = coins;
       alert(`Calling  ${cardTitle} (${cardNumber})...`);
 
-// Add history entry
+// Add history
     const time = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
     const li = document.createElement("li");
     li.className = "card-title justify-between p-2 shadow-sm rounded-lg";
