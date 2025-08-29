@@ -49,13 +49,13 @@ document.querySelectorAll(".card").forEach((card) => {
       }
       coins -= 20;
       coinCounter.textContent = coins;
-      alert(`Calling ${cardTitle} (${cardNumber})...`);
+      alert(`Calling  ${cardTitle} (${cardNumber})...`);
 
 // Add history entry
     const time = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
     const li = document.createElement("li");
-    li.className = "card-title justify-between py-2 shadow";
-    li.innerHTML = `<span>${cardTitle} - ${cardNumber}</span><span class="text-gray-500">${time}</span>`;
+    li.className = "card-title justify-between p-2 shadow-sm rounded-lg";
+    li.innerHTML = `<span>${cardTitle} <br> ${cardNumber}</span><span class="text-grey-100">${time}</span>`;
     historyList.prepend(li);
     });
 });
