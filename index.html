@@ -48,13 +48,13 @@
     </div>
 
     <!-- Main Section -->
-    <div class="bg-gradient-to-b from-green-100 to-green-50 lg:flex pb-5 ">
-        <div class="lg:pt-[68px] lg:pl-[53px] lg:pb-[66px] lg:grid lg:grid-cols-3 lg:gap-[30px] lg:w-[75%] flex flex-col gap-5 p-5">
+    <div class="bg-gradient-to-b from-green-100 to-green-50 mx-auto pb-5 px-5">
+        <div class="lg:pt-[68px] lg:pb-[66px] lg:grid lg:grid-cols-4 lg:gap-[30px] flex flex-col gap-5 p-5">
     <!-- Cards Section -->
         <div class="card bg-white rounded-2xl shadow-md border border-gray-100 p-8">
             <div class="flex items-center justify-between rounded-xl mb-4">
                 <div class="bg-red-100 p-[14px] rounded-2xl"><img src="./assets/emergency.png" alt="" class="lg:size-8 size-6"></div>
-                <i class="fa-regular fa-heart size-6 heart-button cursor-pointer"></i>
+                <i class="fa-regular fa-heart size-10 heart-button cursor-pointer"></i>
             </div>
             <h2 class="font-bold lg:text-2xl text-base hind-midurai mt-4 card-title">National Emergency Number</h2>
             <p class="lg:text-lg text-xs text-gray-500 mb-6 roboto font-normal">National Emergency</p>
@@ -95,7 +95,15 @@
                 <button class="flex-1 btn bg-green-600 hover:bg-green-700 text-white rounded-xl call-button"><i class="fa-solid fa-phone"></i>Call</button>
             </div>
         </div>
-
+        <!-- History Section -->
+        <div class="histoy-div bg-white lg:row-span-3 lg:p-6 items-start rounded-2xl shadow-md p-5 hidden lg:block ">
+            <div class="flex justify-between items-center gap-[100px]">
+                <h3 class="font-medium lg:text-xl text-base roboto"><i class="fa-regular fa-clock"></i> Call History</h3>
+                <button id="clearHistory" class="btn bg-green-600 hover:bg-green-700 text-white rounded-3xl inter font-semibold lg:text-base text-sm lg:px-9 px-5 lg:py-4 py-2">Clear</button>
+            </div>
+            <ul id="historyList" class="mt-4 space-y-2 text-sm roboto"></ul>
+        </div>
+        <!-- Cards Section -->
         <div class="card bg-white rounded-2xl shadow-md border border-gray-100 p-8">
             <div class="flex items-center justify-between rounded-xl mb-4">
                 <div class="bg-red-100 p-[14px] rounded-2xl"><img src="./assets/ambulance.png" alt="" class="lg:size-8 size-6"></div>
@@ -185,16 +193,17 @@
                 <button class="flex-1 btn bg-green-600 hover:bg-green-700 text-white rounded-xl call-button"><i class="fa-solid fa-phone"></i>Call</button>
             </div>
         </div>
-        </div>
-    <div>
     <!-- History Section -->
-        <div class="histoy-div bg-white lg:mt-[68px] lg:ml-[30px] lg:h-[1165px] lg:p-6 items-start rounded-2xl shadow-md m-5 p-5">
+        <div class="histoy-div bg-white lg:row-span-3 lg:p-6 items-start rounded-2xl shadow-md p-5 block md:hidden ">
             <div class="flex justify-between items-center gap-[100px]">
                 <h3 class="font-medium lg:text-xl text-base roboto"><i class="fa-regular fa-clock"></i> Call History</h3>
                 <button id="clearHistory" class="btn bg-green-600 hover:bg-green-700 text-white rounded-3xl inter font-semibold lg:text-base text-sm lg:px-9 px-5 lg:py-4 py-2">Clear</button>
             </div>
             <ul id="historyList" class="mt-4 space-y-2 text-sm roboto"></ul>
         </div>
+        </div>
+    <div>
+
     </div>
     </div>
 </body>

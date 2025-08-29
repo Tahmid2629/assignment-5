@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Navbar counters
+// Navbar counters
   const heartCounter = document.getElementById("heartCount");
   const coinCounter = document.getElementById("coinCount");
   const copyCounter = document.getElementById("copyCount");
@@ -24,32 +23,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const cardNumber = card.querySelector(".card-num").textContent.trim();
     const cardTitle = card.querySelector(".card-title").textContent.trim();
 
-     // ❤️ Heart toggle
+     //  Heart Count
     heartButton.addEventListener("click", function(){
-      if (heartButton.classList.contains("fa-regular")) {
-        heartButton.classList.remove("fa-regular", "text-base");
-        heartButton.classList.add("fa-solid", "text-red-500", "text-2xl");
-        hearts++;
-      } else {
-        heartButton.classList.remove("fa-solid", "text-red-500", "text-2xl");
-        heartButton.classList.add("fa-regular", "text-base");
-        hearts--;
-      }
-      heartCounter.textContent = hearts;
+    hearts++;
+    heartCounter.textContent = hearts;
     });
-    // 📋 Copy button
-    copyButton.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(cardNumber);
-        alert(`Copied: ${cardNumber}`);
-        copies++;
-        copyCounter.textContent = copies;
-      } catch (err) {
-        alert("Failed to copy!");
-      }
+    // Copy button
+    copyButton.addEventListener("click", () => {
+        navigator.clipboard.writeText(cardNumber)
+        .then(() => {
+            alert(`Copied: ${cardNumber}`);
+            copies++;
+            copyCounter.textContent = copies;
+        })
+        .catch(() => {
+            alert("Failed to copy!");
+        });
     });
 
-    // 📞 Call button
+    // Call button
     callButton.addEventListener("click", function(){
       if (coins < 20) {
         alert("Not enough coins! Each call costs 20 coins.");
@@ -60,13 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
       alert(`Calling ${cardTitle} (${cardNumber})...`);
 
       // Add history entry
-      const time = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+      const time = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
       const li = document.createElement("li");
-      li.className = "flex justify-between bg-gray-50 px-3 py-2 rounded-lg shadow-sm";
+      li.className = "card-title justify-between py-2 shadow";
       li.innerHTML = `<span>${cardTitle} - ${cardNumber}</span><span class="text-gray-500">${time}</span>`;
       historyList.prepend(li);
     });
   });
   
-
-});
